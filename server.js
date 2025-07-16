@@ -20,12 +20,9 @@ app.post('/generate', async (req, res) => {
       "Authorization": `Token ${replicateToken}`
     },
   body: JSON.stringify({
-  model: "stability-ai/sdxl",
   version: "db21e45a3f2ddcfdf6c051f30e4d6e6018d5d17e383c7de258f4f67c4f24c161",
   input: {
     prompt: "high quality kitchen interior design, " + userPrompt,
-    width: 768,
-    height: 512
   }
 })
   })
