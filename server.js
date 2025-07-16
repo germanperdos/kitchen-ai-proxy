@@ -20,7 +20,7 @@ app.post('/generate', async (req, res) => {
       "Authorization": `Token ${replicateToken}`
     },
    body: JSON.stringify({
-    version: "ba0425bc2e4bebafa8bd918519fdf3b5a022969a6a7c8ba0746b807bb5b541a3",
+    version: "db21e45a3f2ddcfdf6c051f30e4d6e6018d5d17e383c7de258f4f67c4f24c161",
     input: {
       prompt: "high quality kitchen interior design, " + userPrompt
     }
