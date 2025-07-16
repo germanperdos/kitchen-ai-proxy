@@ -29,8 +29,15 @@ app.post('/generate', async (req, res) => {
     })
   })
 
-  const predictionData = await prediction.json()
-  const statusUrl = predictionData.urls.get
+if (!prediction.ok) {
+  const errorText = await prediction.text();
+  console.error("Ошибка Replicate:", errorText);
+  return res.status(500).json({ error: "Ошибка от Replicate API" });
+}
+
+const predictionData = await prediction.json();
+const statusUrl = predictionData.urls.get;
+
 
   let outputUrl = null
   let tries = 0
