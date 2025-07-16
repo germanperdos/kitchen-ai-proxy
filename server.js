@@ -19,14 +19,15 @@ app.post('/generate', async (req, res) => {
       "Content-Type": "application/json",
       "Authorization": `Token ${replicateToken}`
     },
-    body: JSON.stringify({
-      version: "a9758cbf8a3d1c35c8e6b2a30fa33f9127a7389cf1787f0029c51c2c026b209c",
-      input: {
-        prompt: "high quality kitchen interior design, " + userPrompt,
-        width: 768,
-        height: 512
-      }
-    })
+  body: JSON.stringify({
+  model: "stability-ai/sdxl",
+  version: "f1787f0029c51c2c026b209ca9d0f6e6a329265b321824e8f4cd8f3f1a0f0fab",
+  input: {
+    prompt: "high quality kitchen interior design, " + userPrompt,
+    width: 768,
+    height: 512
+  }
+})
   })
 
 if (!prediction.ok) {
